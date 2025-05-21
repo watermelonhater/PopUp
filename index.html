@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Sofia+Sans:wght@1..1000&display=swap" rel="stylesheet">
+    <title>POPUP</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-decoration">
+            <img class="decoration-img" src="images/decoration.svg" alt="">
+        </div>
+        <div class="popup">
+            <p class="subtitle">
+                FIRST TIME HERE?
+            </p>
+            <h2 class="title">
+                Get 15% OFF Now
+            </h2>
+            <p class="text">
+                Lörem ipsum sura räde. Dilutt koktiga presion. Ogt semimiska multiskap i rängen bes.
+            </p>
+            <form class="form__group" action="/submit" method="post">
+                <div class="form__group-container">
+                    <div class="form__input-user">
+                        <input class="form__input" type="text" placeholder="Enter your email address" required>
+                    </div>
+                    <div class="form__input-radio">
+                        <label class="label-item">
+                            <input type="radio" name="category" value="women" class="real-radio" hidden>
+                            <span class="custom-radio"></span>
+                            Women
+                        </label>
+                        <label class="label-item">
+                            <input type="radio" name="category" value="men" class="real-radio" hidden>
+                            <span class="custom-radio"></span>
+                            Men
+                        </label>
+                    </div>
+                </div>
+            </form>
+            <div class="popup__buttons">
+                <a href="#" class="popup__btn--white">
+                    NO THANKS
+                </a>
+                <a href="#" class="popup__btn--black">
+                    GET MY 15% OFF
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

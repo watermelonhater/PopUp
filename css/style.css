@@ -1,0 +1,165 @@
+body{
+    background-color: #C6D9EE;
+    /* opacity: 50%; не работает */
+
+}
+
+label{
+    cursor: pointer;
+}
+
+.container{
+    position: fixed; /*только для модальных окон?*/
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 75vw;
+    max-height: 757px;
+    border: 5px solid #fff;
+}
+
+.popup{
+    display: flex;
+    flex-direction: column;
+    width: 68%;
+    height: 100%;
+    background-color: #fff;
+    padding-left: 87px;
+    padding-top: 62px;
+    padding-bottom: 75px;
+    padding-right: 10px;
+}
+
+.container-decoration{
+    position: relative;
+    display: block;
+    width: 32%;
+    min-height: 100%;
+    background-color: #C6D9EE;
+    order: 1;
+}
+
+.decoration-img{
+    position: absolute;
+    max-width: 140%; /*на глаз*/
+    height: auto;
+    top: 5px;
+    left: -100px;
+}
+
+.subtitle{
+    font-family: 'Sofia Sans';
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 0.9;
+}
+
+.title{
+    font-family: 'Rozha One';
+    font-size: 60px;
+    padding-bottom: 10px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.text{
+    max-width: 560px;
+    font-family: 'Open Sans';
+    font-size: 22px;
+    color: #9E9C9C;
+    padding-bottom: 59px;
+}
+
+.form__group-container{
+    max-width: 500px;
+}
+
+.form__input{
+    border: 1px solid #BDBDBD;
+    height: 68px;
+    width: 100%;
+    font-family: 'Open Sans';
+    font-size: 30px;
+    padding-left: 29px;
+    margin-bottom: 60px;
+}
+
+input{
+    position: relative;
+}
+
+input::placeholder{
+    position: absolute;
+    line-height: 68px;
+    font-size: 18px;
+    top: 50%;
+    left: 10%;
+    transform: translate(-10%, -50%);
+}
+
+.popup__buttons{
+    display: flex;
+    gap: 88px;
+    align-items: center;
+    font-family: 'Open Sans';
+    text-transform: uppercase;
+    font-size: 22px;
+    max-width: 500px;
+    padding-top: 52px;
+}
+
+.popup__btn--white{
+    color: #9E9C9C;
+    border-bottom: 1px solid;
+}
+
+.popup__btn--black{
+    border: 1px solid #000;
+    background-color: #000;
+    color: #fff;
+    font-weight: 700;
+    padding: 12px 32px;
+} 
+
+.form__input-radio{
+    display: flex;
+    justify-content: space-between;
+    max-width: 333px;
+}
+
+.label-item{
+    font-family: 'Open Sans';
+    font-size: 20px;
+}
+
+.custom-radio {
+    position: relative;
+    display: inline-block;
+    width: 29px;
+    height: 29px;
+    background-color: #fff;
+    border: 2px solid #868686;
+    border-radius: 50%;
+    margin-right: 20px;
+    vertical-align: text-top;
+}
+
+.custom-radio::before{ 
+    content: '';
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.real-radio:checked + .custom-radio::before{
+    display: block;
+}
+
