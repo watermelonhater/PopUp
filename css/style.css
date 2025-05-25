@@ -1,11 +1,12 @@
-body{
-    background-color: #C6D9EE;
-    /* opacity: 50%; не работает */
-
-}
 
 label{
     cursor: pointer;
+}
+
+.popup__bgc{
+    height: 100vh;
+    width: 100vw;
+    background-color: #C6D9EE;
 }
 
 .container{
@@ -46,6 +47,13 @@ label{
     height: auto;
     top: 5px;
     left: -100px;
+}
+
+.popup__close{
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    cursor: pointer;
 }
 
 .subtitle{
@@ -133,7 +141,7 @@ input::placeholder{
     font-size: 20px;
 }
 
-.custom-radio {
+.custom-radio{
     position: relative;
     display: inline-block;
     width: 29px;
@@ -159,7 +167,44 @@ input::placeholder{
     display: none;
 }
 
+.custom-radio::after{
+    content: '';
+    display: inline-block;
+    width: 29px;
+    height: 29px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius:50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+} 
+
 .real-radio:checked + .custom-radio::before{
+    display: block;
+    z-index: 3;
+}
+
+.real-radio:checked + .custom-radio::after{
     display: block;
 }
 
+.close__inner{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.close__inner-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18.33px;
+    height: 18.33px;
+}
